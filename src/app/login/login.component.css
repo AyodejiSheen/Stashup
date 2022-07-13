@@ -1,0 +1,140 @@
+.main{
+    background-color: rgb(242, 242, 255);
+    height: 100vh;
+    color: white;
+    padding-top: 30px;
+}
+
+.login {
+    font-size: 18px;
+}
+
+.info{
+    font-size: 12px;
+}
+
+.logo{
+    border-radius: 50%;
+    background-color: white;
+    color: #000000;
+    font-family: cursive;
+}
+
+
+.footer{
+    font-size: 12px;
+}
+
+.wrapper{
+    background-color: #843dc7;
+    box-shadow: 0px -2px 4px rgba(100,100,100,0.5);
+    box-shadow: 0px 2px 4px rgba(100,100,100,0.5);
+}
+
+.form-group, .form-control, .forgot{
+    font-size: 14px;
+}
+
+.inp{
+    outline: 0px;
+    box-shadow: none;
+    border-left: none;
+    border-radius: 0px;
+    border-right: none;
+    border-top: none;
+    height: 50px!important;
+    box-shadow: 0px -2px 4px rgba(100,100,100,0.5);
+    box-shadow: 0px 2px 4px rgba(100,100,100,0.5);
+}
+
+.btn-block{
+    height: 50px!important;
+}
+
+.underline{
+    background-color: #b00020;
+    width: 70px;
+    height: 2px;
+    margin-top: -10px;
+}
+
+
+.bubble{
+    background-color: #4c0121;
+    opacity: 0.1;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: absolute;
+    top: 0;
+    margin-left: -300px;
+    animation-name: bubbleMove;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.bubble2{
+    background-color: #4c0121;
+    opacity: 0.1;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: absolute;
+    bottom: 0;
+    margin-left: 500px;
+    animation-name: bubbleMove2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes bubbleMove{
+    0%{
+        margin-top: 100px;
+    }
+
+    100%{
+        margin-top: -100px;
+    }
+}
+
+@keyframes bubbleMove2{
+    0%{
+        margin-bottom: 100px;
+    }
+
+    30%{
+        margin-left: 700px;
+    }
+
+    100%{
+        margin-top: -100px;
+    }
+}
+
+
+.btn-login{
+    background-color: #000000;
+}
+
+
+@media(min-width:300px) and (max-width:400px){
+
+    .logo{
+        font-size: 16px;
+    }
+
+    .bubble, .bubble2{
+        display: none;
+    }
+
+    .fixed-bottom{
+        margin-top: 50px!important;
+    }
+
+
+
+}

@@ -1,0 +1,23 @@
+<div class="mt-4 text-right"> 
+    <button class="btn  shadow bg-white m-1 create-btn" routerLink="notifications">Notifications <i class="fa fa-comment-alt ml-2"></i></button>
+    <button class="btn  shadow bg-white m-1 create-btn" routerLink="create-group">Create Group <i class="fa fa-plus-circle ml-2"></i></button>
+</div>
+
+<div class="row mt-2">
+    <div class="col-md-3 rounded p-2 m-3 bg-white">
+        <p  class="text-dark font-weight-bold pl-3">Current Balance <i class="fa fa-money-bill ml-2 text-danger"></i></p>
+        <h3 style="color: #5c189b;" class="font-weight-bold text-right pr-3">{{ "₦" + users[userId].balance + ".00"}}</h3>
+    </div>
+
+    <div class="col-md-3 rounded p-2 m-3 bg-white">
+        <p class="text-dark font-weight-bold pl-3">Total Savings <i class="fa fa-money-bill-wave ml-2 text-danger"></i></p>
+        <h3 style="color: #5c189b;" class=" font-weight-bold text-right pr-3">{{ "₦" + users[userId].totalstashbal + ".00"}}</h3>
+    </div>
+
+    <div class="col-md-3 rounded p-2 m-3 btn bg-white" routerLink="groups">
+        <p class="text-dark font-weight-bold pl-3">Number of Group <i class="fa fa-users ml-2 text-danger"></i></p>
+        <h3 style="color: #5c189b;" class="font-weight-bold text-right pr-3">{{users[userId].totalgroup}}</h3>            
+    </div>
+</div>
+
+<div class="dropdown-divider m-3"></div>

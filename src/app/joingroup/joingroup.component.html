@@ -1,0 +1,56 @@
+<div class="container shadow pt-4 pl-5 pr-5 pb-2">
+    <div class="text-center ">
+        <h3 class="heading">Join A Group</h3>
+        <div class="underline mx-auto mt-2"></div>
+    </div>
+    
+    <form (submit)="onSubmit()">
+    <div class="row mt-5">
+        <div class="col-md-7 mx-auto">
+                <input type="text" [(ngModel)]="inputcode" class="form-control inp" name="groupcode" placeholder="Enter the Group code"/>
+                <p class="mt-2 sub-note">{{info}}</p>
+            </div>
+            <div class="col-md-4 mx-auto text-center ml-4">
+                <button type="submit" class="btn-block btn-big btn-danger btn shadow">SUBMIT</button>
+            </div>
+        </div>
+    </form>
+
+    <div *ngIf="auth">
+        <div class="row">
+            <div class="col-md-4">
+                <p class="group-tag p-2 text-center">Group Name: </p> <span class="font-weight-bold">{{grps.groupname}}</span>
+            </div>
+
+            <div class="col-md-4">
+                <p class="group-tag p-2 text-center">Admin Name:</p> <span class="font-weight-bold">{{grps.adminname}}</span>
+            </div> 
+
+            <div class="col-md-4">
+                <p class="group-tag p-2 text-center">Stopping Date:</p> <span class="font-weight-bold">{{grps.stopdate}}</span>
+            </div> 
+    
+            <div class="col-md-4">
+                <p class="group-tag p-2 text-center">Stashing Period:</p> <span class="font-weight-bold">{{grps.stashprd}}</span>
+            </div> 
+
+    
+            <div class="col-md-4">
+                <p class="group-tag p-2 text-center">Amount For Stashing: </p> <span class="font-weight-bold">{{grps.stashamt}}</span>
+            </div>
+        </div>
+    
+        <div class="dropdown-divider"></div>
+        <div class="row">
+    
+            <div class="col-md-7">
+                <p class="group-tag p-2 text-center">Group Description:</p>
+                <span>{{grps.groupnote}}</span>
+            </div>
+            
+            <div class="col-md-5 mx-auto  mt-4 text-center">
+                <button class="btn btn-big btn-primary shadow" (click)="onJoin()">JOIN NOW</button>
+            </div> 
+        </div>
+    </div>
+</div>

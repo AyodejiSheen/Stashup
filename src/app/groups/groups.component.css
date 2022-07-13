@@ -1,0 +1,9 @@
+.horizontal-scrollable{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.group{
+    display: inline-block;
+    float: none;
+}

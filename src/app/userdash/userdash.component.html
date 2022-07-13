@@ -1,0 +1,106 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 shadow pt-3">
+            <div class="activity-nav pl-4 p-3 mt-2">
+                <h6 style="color: #5c189b;"> See Your Recent Activities <i class="fa fa-thumbs-up"></i></h6>
+                <p class="mb-0 sub-note"> See your most recent activities on StashUp</p>
+            </div>
+
+            <nav class="nav-section">
+                <div class="nav nav-tabs flex-column flex-sm-row" id="nav-tab" role="tablist">
+                <p class="nav-link btn active  text-dark flex-sm-fill text-sm-center" id="nav-personal-tab" data-toggle="tab" href="#nav-personal" role="tab" aria-controls="nav-home" aria-selected="true">Credit Transactions <i class="fa fa-download ml-2"></i></p>
+                <p class="nav-link btn text-dark flex-sm-fill text-sm-center" id="nav-income-tab" data-toggle="tab" href="#nav-income" role="tab" aria-controls="nav-profile" aria-selected="false">Debit Transactions<i class="fa fa-upload ml-2"></i></p>
+                </div>
+          </nav>
+
+          <div class="tab-content" id="nav-tabContent">
+
+            <div class="tab-pane fade show active" id="nav-personal" role="tabpanel" aria-labelledby="nav-personal-tab">
+                <table class="table">
+                    <thead class="thead text-white">
+                      <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Remark</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let trans of credit.slice().reverse(); let ind = index">
+                      <tr>
+                        <th scope="row">{{trans.date}}</th>
+                        <td>{{trans.amount}}</td>
+                        <td>{{trans.status}}</td>
+                        <td>{{trans.remark}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+            </div>
+            
+            <div class="tab-pane fade" id="nav-income" role="tabpanel" aria-labelledby="nav-income-tab">
+                <table class="table ">
+                    <thead class="thead text-white">
+                      <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Remark</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let trans of debit.slice().reverse(); let ind = index">
+                      <tr>
+                        <th scope="row">{{trans.date}}</th>
+                        <td>{{trans.amount}}</td>
+                        <td>{{trans.status}}</td>
+                        <td>{{trans.remark}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-4 p-4">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <!-- <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul> -->
+          
+            <!-- The slideshow -->
+            <div class="carousel-inner ">
+              <div class="carousel-item active">
+                <img src="../../assets/refer-friend.jpg" class="carousel-img" />
+                    <div class="text-center carousel-note text-white p-1 mt-2">Refer Your Friend And Some Credit Bonus</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../../assets/keep-money.jpg"  class="carousel-img"> 
+                <div class="text-center carousel-note text-white p-1 mt-2">Stash Your Money In A Reliable Place</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../../assets/keep-money2.jpg"  class="carousel-img" >
+                <div class="text-center  carousel-note text-white p-1 mt-2">Make Yourself Rich Through Saving</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../../assets/achieve.jpg"  class="carousel-img"  >
+                <div class="text-center carousel-note  text-white p-1 mt-2">Achieve Your Desire Goal By Saving</div>
+              </div>
+            </div>
+          
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          
+          </div>
+    </div>
+</div>
+</div>

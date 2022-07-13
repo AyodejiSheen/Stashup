@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="col-md-7 col-sm-12 mx-auto p-5 shadow">
+        <div class="text-center">
+            <h3 class="heading font-weight-bold">Fund your Account</h3>
+            <p class="sub-note">Fund your account to be able to stash your money</p>
+        </div>
+        <form (submit)="addFund()" [formGroup]="addfundForm">
+            <p class="sub-note info mb-0">{{info}}</p>
+            <input type="email" formControlName="email" class="form-control mb-2 inp" placeholder="Enter your Email Address"/>
+            <input type="number" formControlName="amount" class="form-control mb-2 inp" placeholder="Enter the Amount"/>
+            <input type="password" formControlName="password" class="form-control mb-2 inp" placeholder="Enter your Password"/>
+            <button type="submit" [disabled]="addfundForm.invalid" class="btn btn-big btn-danger btn-block rounded-0 mt-4 shadow">SUBMIT</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.pills-text{
+    color: #150116;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background-color: #5c189b!important;
+    border-radius: 0px!important;
+    color: white!important;
+}
+
+.inp{
+    outline: 0px;
+    box-shadow: none;
+    border-left: none;
+    border-radius: 0px;
+    border-right: none;
+    border-top: none;
+    height: 45px!important;
+    box-shadow: 0px -2px 4px rgba(100,100,100,0.2);
+    box-shadow: 0px 2px 4px rgba(100,100,100,0.2);
+}
+

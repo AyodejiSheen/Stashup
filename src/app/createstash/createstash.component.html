@@ -1,0 +1,66 @@
+<div class="container shadow pt-4 pr-5 pl-5 pb-4 ">
+
+    <h4 class="text-center heading mb-4"> Create A Group</h4>
+    <div class="underline mx-auto"></div>
+
+    <nav class="mt-4">
+        <div class="nav nav-tabs flex-column flex-sm-row" id="nav-tab" role="tablist">
+        <p class="nav-link btn pills-text active  flex-sm-fill text-sm-center font-weight-bold" id="nav-personal-tab" data-toggle="tab" href="#nav-personal" role="tab" aria-controls="nav-home" aria-selected="true">Group Details <i class="fa fa-users ml-2"></i></p>
+        <p class="nav-link btn pills-text flex-sm-fill text-sm-center font-weight-bold" id="nav-income-tab" data-toggle="tab" href="#nav-income" role="tab" aria-controls="nav-profile" aria-selected="false">Stashing Coniditions<i class="fa fa-gavel ml-2"></i></p>
+        </div>
+    </nav>
+
+  <form (submit)="createGroup()" [formGroup]="groupForm">
+
+    <div class="tab-content" id="nav-tabContent">
+  
+      <div class="tab-pane fade show active" id="nav-personal" role="tabpanel" aria-labelledby="nav-personal-tab">
+        <p class=" mt-2 mb-0 sub-note font-weight-bold text-infos ">Please, fill the form below:</p>
+        
+          <div class="form-group mt-5">
+              <input type="text" formControlName="groupname" class="form-control inp" id="formGroupExampleInput" name="groupname" placeholder="Enter Group Name">
+          </div>
+          
+          <div class="row">
+
+            <div class="form-group col-md-6 mt-5">
+             <input type="text" formControlName="adminname" class="form-control inp" id="formGroupExampleInput" name="adminname" placeholder="Admin Full Name">
+            </div>
+
+            <div class="form-group col-md-6 mt-5">
+              <input type="text" formControlName="stopdate" class="form-control inp" id="formGroupExampleInput" name="stopdate" placeholder="Stopping Date" onfocus="(this.type='date')">
+             </div>
+          </div>
+  
+        </div>
+      
+      <div class="tab-pane fade" id="nav-income" role="tabpanel" aria-labelledby="nav-income-tab">
+          <p class=" mt-2 mb-0 sub-note font-weight-bold text-right">Provide the Conditions for Stashing</p>
+  
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group mt-3">
+                      <input type="number" formControlName="stashamt" class="form-control inp" id="formGroupExampleInput" name="stashamt" placeholder="Amount To Be Stash">
+                  </div>
+              </div>
+  
+              <div class="col-md-6">
+                  <div class="form-group mt-3">
+                      <select  formControlName="stashprd" class="form-control inp" id="formGroupExampleInput" name="schedule">
+                          <option selected disabled>Select Interval for Stashing</option>
+                          <option value="Daily">Daily</option>
+                          <option value="Monthly" >Weekly</option>
+                          <option value="Quarterly" >Monthlys</option>
+                      </select>
+                    </div>
+              </div>
+          </div>
+  
+            <div class="form-group mt-3">
+              <textarea type="text" formControlName="groupnote" class="form-control inp" rows="3" id="formGroupExampleInput" name="groupnote" placeholder="Group Description"></textarea>
+            </div>
+            <button type="submit" [disabled]="groupForm.invalid" class="btn btn-big btn-danger btn-block rounded-0 mt-4 shadow">SUBMIT</button>
+        </div>
+  </div>
+  </form>
+</div>

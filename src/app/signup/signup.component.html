@@ -1,0 +1,131 @@
+<div class="main">
+  <!-- <div class="text-center pb-3">
+    <a class="navbar-brand text-dark font-weight-bold" ><span class="logo mr-3 pt-1 pl-3 pr-3 pb-2 ">S</span>STASHMONEY</a>
+  </div> -->
+    <div class="col-md-8 wrapper mx-auto p-4">
+       <p class="text-white text-center font-weight-bold login"> Sign up</p>
+       <div class="underline mx-auto"></div>
+       <p class="text-center info mt-4 mb-4">Create an Account and start stashing your income</p>
+
+       <form class="mt-4" (submit)="onSubmit()" [formGroup]="userForm">
+        <p class="mt-2 sub-note text-center" id="info">{{info}}</p>
+          <nav>
+            <div class="nav nav-tabs flex-column flex-sm-row" id="nav-tab" role="tablist">
+              <p class="nav-link btn active text-dark flex-sm-fill text-sm-center" id="nav-personal-tab" data-toggle="tab" href="#nav-personal" role="tab" aria-controls="nav-home" aria-selected="true">Personal Details <i class="fa fa-user ml-2"></i></p>
+              <p class="nav-link btn text-dark flex-sm-fill text-sm-center" id="nav-income-tab" data-toggle="tab" href="#nav-income" role="tab" aria-controls="nav-profile" aria-selected="false">Income Details <i class="fa fa-money-bill-wave ml-2"></i></p>
+              <p class="nav-link btn text-dark flex-sm-fill text-sm-center" id="nav-account-tab" data-toggle="tab" href="#nav-account" role="tab" aria-controls="nav-contact" aria-selected="false">Account Details  <i class="fa fa-user-circle ml-2"></i></p>
+            </div>
+          </nav>
+
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-personal" role="tabpanel" aria-labelledby="nav-personal-tab">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group mt-4">
+                            <label for="formGroupExampleInput" >First Name </label>
+                            <input type="text" formControlName="firstname" class="form-control inp" id="formGroupExampleInput" name="firstname" placeholder="Enter your First Name">
+                          </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group mt-4">
+                            <label for="formGroupExampleInput" >Middle Name </label>
+                            <input type="text" formControlName="middlename" class="form-control inp" id="formGroupExampleInput" name="middlename" placeholder="Enter your Middle Name">
+                          </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group mt-4">
+                            <label for="formGroupExampleInput" >Last Name </label>
+                            <input type="text" formControlName="lastname" class="form-control inp" id="formGroupExampleInput" name="lastname" placeholder="Enter your Last Name">
+                          </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mt-3">
+                            <label for="formGroupExampleInput" >Date of Birth </label>
+                            <input type="date" formControlName="dob" class="form-control inp" id="formGroupExampleInput" name="lastname" placeholder="Enter your Last Name">
+                          </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group mt-3">
+                            <label for="formGroupExampleInput" >Gender</label>
+                            <select formControlName="gender" class="form-control inp" id="formGroupExampleInput" name="gender">
+                                <option selected disabled>Select your gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female" >Female</option>
+                            </select>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="formGroupExampleInput" >Home Address </label>
+                    <input type="text" formControlName="home" class="form-control inp" id="formGroupExampleInput" name="address" placeholder="Enter your Home Address">
+                  </div>
+            </div>
+            
+            <div class="tab-pane fade" id="nav-income" role="tabpanel" aria-labelledby="nav-income-tab">
+
+                <div class="form-group mt-3">
+                    <label for="formGroupExampleInput" >Job Title </label>
+                    <input type="text" formControlName="jobtitle" class="form-control inp" id="formGroupExampleInput" name="jobtitle" placeholder="Enter your job title">
+                  </div>
+                
+                  <div class="form-group mt-3">
+                    <label for="formGroupExampleInput" >Estimated Monthly Income</label>
+                    <input type="number" formControlName="income" class="form-control inp" id="formGroupExampleInput" name="income" placeholder="Enter your estimated monthly income. E.g: 10000, 20000, 30000 ...">
+                  </div>
+
+            </div>
+            
+            <div class="tab-pane fade" id="nav-account" role="tabpanel" aria-labelledby="nav-account-tab">
+                
+                <div class="form-group mt-3">
+                    <label for="formGroupExampleInput">Email Address</label>
+                    <input type="email" formControlName="email" class="form-control inp" id="formGroupExampleInput" name="email" placeholder="Enter your Email Address">
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mt-3">
+                            <label for="formGroupExampleInput" >Password </label>
+                            <input type="password" formControlName="password" class="form-control inp" id="formGroupExampleInput" name="password" placeholder="Enter your Password">
+                          </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group mt-3">
+                            <div class="form-group mt-3">
+                                <label for="formGroupExampleInput" >Confirm Password </label>
+                                <input type="password" formControlName="cpassword" class="form-control inp" id="formGroupExampleInput" name="ConfrmPassword" placeholder="Confirm Password">
+                              </div>
+                          </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="text-white shadow-lg rounded-0 btn-block btn font-weight-bold lead mt-4">SIGN UP</button>
+            </div>
+        </div>
+        
+    </form>
+    
+        <div class="dropdown-divider mt-5"></div>
+       <p class="text-white text-center forgot mt-3">Already have an Account? <a routerLink="/login">Login now</a></p>
+       <div class="bubble"></div>
+       <div class="bubble2"></div>
+       
+       <br>
+       <br>
+    </div>
+
+
+</div>
+
+<nav class="navbar navbar-expand-sm bg-light navbar-dark fixed-bottom justify-content-center">
+  <p class="text-center text-secondary footer mb-0 p-2 ">Designed by Adeyemi Oluwasegun Ayodeji</p>
+  </nav>

@@ -1,0 +1,56 @@
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-3 dash-nav p-5 ">
+        <div class="mx-auto mb-4 text-center user-icon">
+            <i class="fa fa-user-circle text-white "></i>
+            <div class=" text-white">
+                <p class="font-weight-bold user-details text-white mb-0 lead mt-4">{{users[userId].firstname + "  " +users[userId].lastname}}</p>
+                <p class="text-dark">{{users[userId].email}}</p>
+            </div>
+        </div>
+
+        <div class="navbar-light dash-list text-white text-left pt-3">
+                <div class="lg-nav row">
+                     <button class="btn btn-block pl-5 p-2 text-left rounded dash-item" routerLink="/dashboard" routerLinkActive="font-weight-bold bg-white text-danger">Dashboard</button>
+                    <button class="btn btn-block pl-5 p-2 text-left rounded dash-item" routerLink="add-fund" routerLinkActive="font-weight-bold bg-white text-danger">Add Fund</button>
+                     <button class="btn btn-block pl-5 p-2 text-left rounded dash-item" routerLink="/dashboard/withdraw-fund" routerLinkActive="font-weight-bold bg-white text-danger">Withdraw Fund</button>
+                     <button class="btn btn-block pl-5 p-2 text-left rounded dash-item" routerLink="/dashboard/join-group" routerLinkActive="font-weight-bold bg-white text-danger">Join Group</button>
+                     <button class="btn btn-block pl-5 p-2 text-left rounded dash-item" routerLink="/dashboard/profile" routerLinkActive="font-weight-bold bg-white text-danger">View Profile</button>
+                </div>
+                
+                <nav class="navbar my-nav">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="text-white small-user-detail">
+                        <h6>Welcome!</h6>
+                        <p class="font-weight-bold user-details text-white mb-0 lead">{{users[userId].firstname + "  " +users[userId].lastname}}</p>
+                    </div>
+                    
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav  shadow bg-light p-3 rounded mt-3">
+                            <button class="btn btn-block pl-5 p-2 text-left rounded dash-item" routerLink="/dashboard" routerLinkActive="font-weight-bold bg-white text-danger">Dashboard</button>
+                            <button class="btn btn-block pl-5 p-2 text-left rounded dash-item" routerLink="add-fund" routerLinkActive="font-weight-bold bg-white text-danger">Add Fund</button>
+                            <button class="btn btn-block pl-5 p-2 text-left rounded dash-item" routerLink="/dashboard/withdraw-fund" routerLinkActive="font-weight-bold bg-white text-danger">Withdraw Fund</button>
+                            <button class="btn btn-block pl-5 p-2 text-left rounded dash-item" routerLink="/dashboard/join-group" routerLinkActive="font-weight-bold bg-white text-danger">Join Group</button>
+                            <button class="btn btn-block pl-5 p-2 text-left rounded dash-item" routerLink="/dashboard/profile" routerLinkActive="font-weight-bold bg-white text-danger">View Profile</button>
+                            <button class="btn p-2 shadow logout" routerLink="/login">LogOut <i class="fa fa-power-off ml-2"></i> </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <button class="btn pl-3 pr-3 p-2 ml-5 shadow logout lg-nav" routerLink="/login">LogOut <i class="fa fa-power-off ml-2"></i> </button>
+
+    </div>
+
+    <div class="col-md-9">
+        <div class="container">
+            <app-details></app-details>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+</div>
+
+

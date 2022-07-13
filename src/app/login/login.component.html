@@ -1,0 +1,39 @@
+<div class="main">
+  <div class="text-center pb-3">
+    <!-- <a class="navbar-brand text-dark font-weight-bold" ><span class="logo mr-3 pt-1 pl-3 pr-3 pb-2 ">S</span>STASHMONEY</a> -->
+  </div>
+
+    <div class="col-md-4 mx-auto wrapper rounded p-5 ">
+       <p class="text-white text-center font-weight-bold login">Log In</p>
+       <div class="underline mx-auto"></div>
+       <form (submit)="userLogin()">
+        <p class="mt-2 sub-note text-center" id="info">{{info}}</p>
+        <div class="form-group mt-4">
+            <label for="formGroupExampleInput" >Email Address </label>
+            <input type="email" [(ngModel)]="logdetails.email" class="form-control inp" id="formGroupExampleInput" name="email" placeholder="Enter your Email Address">
+          </div>
+
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Password</label>
+            <input type="password" [(ngModel)]="logdetails.password" class="form-control inp mb-4" id="formGroupExampleInput2" name="password" placeholder="Enter Password">
+          </div>
+
+           <button type="submit" class="text-white btn-login shadow-lg rounded-0 btn-block btn font-weight-bold lead mt-4"> LOG IN</button>
+       </form>
+       <p class="text-white text-center forgot mt-3">Forgot Password?</p>
+       <p class="text-white text-center forgot mt-3">Don't have an Account? <a routerLink="/registration">Sign up now</a></p>
+
+       <div class="bubble"></div>
+       <div class="bubble2"></div>
+      <!-- <button class="btn btn-primary">TEST</button> -->
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-light navbar-dark fixed-bottom justify-content-center">
+  <p class="text-center text-secondary footer mb-0 p-2 ">Designed by Adeyemi Oluwasegun Ayodeji</p>
+  </nav>
+
+
+
+
+

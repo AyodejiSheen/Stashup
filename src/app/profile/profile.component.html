@@ -1,0 +1,46 @@
+<div class="container">
+    <div class=" text-center">
+        <h3 class="heading">Profile</h3>
+        <div class="underline mx-auto mt-2"></div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4 border-right">
+            <p class="tag pl-4 p-2 mb-0">Fullname</p>
+            <p class="font-weight-bold mt-2">{{users[userId].firstname + " " + users[userId].middlename + " " + users[userId].lastname | uppercase}}</p>
+        </div>
+
+        <div class="col-md-4 border-right">
+            <p class="tag pl-4 p-2 mb-0">Gender</p>
+            <p class="font-weight-bold mt-2">{{users[userId].gender}}</p>
+        </div>
+
+        <div class="col-md-4 border-right">
+            <p class="tag pl-4 p-2 mb-0">Date of Birth</p>
+            <p class="font-weight-bold mt-2">{{users[userId].dob}}</p>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-4 border-right">
+            <p class="tag pl-4 p-2 mb-0">Email Address</p>
+            <p class="font-weight-bold mt-2">{{users[userId].email}}</p>
+        </div>
+
+        <div class="col-md-4 border-right">
+            <p class="tag pl-4 p-2 mb-0">Home Address</p>
+            <p class="font-weight-bold mt-2">{{users[userId].home}}</p>
+        </div>
+
+        <div class="col-md-4 border-right">
+            <p class="tag pl-4 p-2 mb-0">Job Title</p>
+            <p class="font-weight-bold mt-2">{{users[userId].jobtitle}}</p>
+        </div>        
+        
+        <div class="col-md-4 border-right">
+            <p class="tag pl-4 p-2 mb-0">Est. Monthly Income</p>
+            <p class="font-weight-bold mt-2">{{ "₦" + users[userId].income + ".00"}}</p>
+        </div>
+    </div>
+
+</div>
